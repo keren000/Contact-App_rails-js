@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProjectRails</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<head>
+  <%= render 'layouts/navbar' %>
+  </head>
+<div class="container" style="padding-top:20px;">
+
+<%= yield %>
+</div>
+</body>
+ <!-- Footer -->
+  <div class="footer" style=" position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;">&copy; 2019 Developed by <i class="fa fa-heart" style="color:red"></i>&nbsp;Keren-Happuc Fleurimond</div>
+
+</html>

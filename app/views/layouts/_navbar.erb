@@ -1,0 +1,34 @@
+ 
+<!-- navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <%= link_to "Contact App", root_path, class: "navbar-brand text-uppercase" %>          
+        </div>
+        <!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <div class="nav navbar-right navbar-btn">
+          <% if logged_in? %>
+      <ul class="navbar-nav ml-auto">
+        <a><%= link_to "My Contact", albums_path, :class => 'btn bnt-secondary' %></a>
+        <a><%= link_to "New Contact", new_album_path, :class=> 'btn bnt-secondary' %></a>
+        <a><%= link_to "Log Out", logout_path, :class => 'btn bnt-secondary' %></a>
+      </ul><% else %>
+       <div class="navbar-text ml-lg-3">
+        <ul class="navbar-nav ml-auto">
+         <a> <%= link_to("Log In", login_path) %></a> &nbsp;&nbsp;
+         <a> <%= link_to("Sign Up", signup_path) %></a>
+        </ul>
+       </div>
+      <% end %>
+    </div>
+   </div>
+ </div>
+</nav>

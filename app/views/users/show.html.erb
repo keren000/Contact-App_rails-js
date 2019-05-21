@@ -1,0 +1,17 @@
+<br /><br />
+
+<section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Welcome <%= @user.name %>!</h1>
+        
+        <p class="lead text-muted">Your are in he best place where you can create your contact archive! 
+          Explore more and continue the journey with us...<br />👧👍👍👧.</p>
+        <p>
+        
+          <%= link_to "Contact List", albums_path, :class=> 'btn btn-info' %>
+          <%= link_to "Add new Contact", new_album_path, :class=> 'btn btn-primary' %>
+        </p>
+      </div>
+    </section>
+
+
