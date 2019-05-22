@@ -8,7 +8,7 @@
  <h4 class="text-right">
     All Contacts <span class="badge"><%= current_user.albums.count %></span>
   </h4>
-<h4 class="text-left"><%= link_to "New Contact", new_album_path, class: "fa fa-plus" %></h4></div>
+<h4 class="text-left"><%= link_to "New Contact", new_album_path, id:"add_album", class: "fa fa-plus" %></h4></div>
 <br />
 
 <table class="table table-bordered table-striped">
@@ -30,10 +30,10 @@
         <td class="text-justify", style="width: 20%"><%= album.address %></td>
         <td class="text-center", style="width: 30%">
           <ul class="btn">
-             <li class="element"><%= link_to edit_album_path(album), class: "btn btn-circle btn-default btn-xs", title: "Edit" do %>
+             <li class="element"><%= link_to edit_album_path(album), id:"update_album", class: "btn btn-circle btn-default btn-xs", title: "Edit" do %>
               <i class="fa fa-edit" style="color:green"></i>
             <% end %></li>
-            <li class="element"><%= button_to "Delete",  album, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{album.name}?" %></li>
+            <li class="element"><%= button_to "Delete",  album, id:"delete_album", method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{album.name}?" %></li>
         </ul>
         </td>
       </tr>

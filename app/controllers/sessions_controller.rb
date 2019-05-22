@@ -24,6 +24,7 @@ class SessionsController < ApplicationController
       redirect_to user_path(@user)
     else
       redirect_to login_path, :flash => { :error => "Incorrect username/password. Please try again."}
+      
     end
   end
 

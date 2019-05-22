@@ -1,16 +1,25 @@
 <div class="start-pages signup-login">
-  <h4 class="blue-bold">Sign Up!</h4><br>
+  <h2 class="blue-bold">Sign Up!</h2><br>
     <%= form_for @user do |f| %>
-      <%= f.text_field :email, placeholder: "Email", :size => 25 %>
+      <div class="input-group">
+          <span class="input-group-addon"><span class="fa fa-envelope fa-lg fa-fw"></span></span>
+          <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+      </div>
       <br /><br />
-      <%= f.text_field :name, placeholder: "Username", :size => 25 %>
+      <div class="input-group">
+          <span class="input-group-addon"><span class="fa fa-user fa-lg fa-fw"></span></span>
+          <%= f.text_field :name, class: 'form-control', placeholder: 'Username' %>
+      </div>
       <br /><br />
-      <%= f.password_field :password, placeholder: "Password", :size => 25 %>
+      <div class="input-group">
+          <span class="input-group-addon"><span class="fa fa-key fa-lg fa-fw"></span></span>
+          <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
+    </div>
       <br /><br />
       <%= f.submit "Create Account", :class => 'btn btn-block btn-success' %>
       <br />
     <% end %>
-
+   
     <div class="user-errors">
       <% if @user.errors.any? %>
         <div id="error_explanation">
