@@ -1,1 +1,1 @@
-json.extract! @gallery, :id, :name, :phone, :email, :address, :avatar
+json.extract! @albums, :id, :name, :phone, :email, :address, :avatar

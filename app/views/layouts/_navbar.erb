@@ -20,7 +20,8 @@
         <a><%= link_to "My Contact", albums_path, id: "album_index", :class => 'btn bnt-secondary' %></a>
         <a><%= link_to "New Contact", new_album_path, :class=> 'btn bnt-secondary' %></a>
         <a><%= link_to "Log Out", logout_path, :class => 'btn bnt-secondary' %></a>
-      </ul><% else %>
+      </ul>
+      <% else %>
        <div class="navbar-text ml-lg-3">
         <ul class="navbar-nav ml-auto">
          <a> <%= link_to("Log In", login_path) %></a> &nbsp;&nbsp;

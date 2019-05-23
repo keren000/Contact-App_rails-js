@@ -30,6 +30,8 @@ gem 'coffee-rails', '~> 5.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'active_model_serializers', '~> 0.10.9'
+gem 'api-pagination', '~> 4.8', '>= 4.8.2'
+gem 'pagy', '~> 3.2'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -53,7 +55,3 @@ group :development do
   gem 'spring', '~> 2.0', '>= 2.0.2'
   gem 'spring-watcher-listen', '~> 2.0', '>= 2.0.1'
 end
-
-
-#js
-# gem 'responders', '~> 2.4', '>= 2.4.1'

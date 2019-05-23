@@ -3,10 +3,15 @@ class AlbumsController < ApplicationController
     
   # GET /albums
   # GET /albums.json
-  def index
-    @albums = current_user.albums.paginate(page: params[:page], per_page: 4)
-  end
+   def index
+     @albums = current_user.albums.paginate(page: params[:page], per_page: 4)
+     respond_to do |format|
+       format.html
+       format.json {render json: @albums}
+     end
+    end
 
+    
   # GET /albums/1
   # GET /albums/1.json
   def show
